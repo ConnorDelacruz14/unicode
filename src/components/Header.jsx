@@ -13,24 +13,23 @@ function Header(image, username) {
   return (
     <div className="header">
       <div className="searchbar-container">
-        <input className="searchbar" type="text" placeholder="Search" />
+        <input
+          className="searchbar"
+          type="text"
+          placeholder="Search Projects"
+        />
         <FontAwesomeIcon icon={faSearch} className="search-icon" />
       </div>
       <div className="profile-container">
-        <img
-          className="pfp"
-          alt="profile"
-          src={picture}
-          onClick={toggleDropDown}
-        ></img>
-        <div className="username" onClick={toggleDropDown}>
-          connorjd
+        <img className="pfp" alt="profile" src={picture}></img>
+        <div className="username-container" onClick={toggleDropDown}>
+          <span className="username">connorjd</span>
           {isOpenDropDown && (
             <div className="dropdown-content">
               <ul>
-                <li>Option 1</li>
-                <li>Option 2</li>
-                <li>Option 3</li>
+                <li>Friends</li>
+                <li>Your Projects</li>
+                <li>Sign Out</li>
               </ul>
             </div>
           )}
