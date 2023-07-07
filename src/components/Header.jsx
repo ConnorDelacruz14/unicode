@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBell } from "@fortawesome/free-solid-svg-icons";
+import SearchBar from "./SearchBar";
 
 const picture = "https://cdn-icons-png.flaticon.com/512/3135/3135715.png";
 function Header() {
@@ -26,14 +26,7 @@ function Header() {
 
   return (
     <div className="header">
-      <div className="searchbar-container">
-        <input
-          className="searchbar"
-          type="text"
-          placeholder="Search Projects"
-        />
-        <FontAwesomeIcon icon={faSearch} className="search-icon" />
-      </div>
+      <SearchBar />
       <div className="profile-container">
         <img className="pfp" alt="profile" src={picture}></img>
         <div

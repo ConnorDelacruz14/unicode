@@ -21,6 +21,7 @@ code {
   height: 100vh;
   background: #213555;
   position: absolute;
+  z-index: 0;
 }
 
 .sidebar-title {
@@ -46,7 +47,7 @@ code {
   display: flex;
   padding: 10px 20px;
   color: #808191;
-  transition: 0.5s;
+  transition: 0.1s;
 }
 
 .baritem:hover {
@@ -73,6 +74,27 @@ code {
   color: #FFF;
 }
 
+.baritem.selected {
+  color: #FFF;
+}
+
+.baritem.selected:nth-child(3) .sidebaricon {
+  color: #90ee90;
+}
+
+.baritem.selected:nth-child(4) .sidebaricon {
+  color: #FFA07A;
+}
+
+.baritem.selected:nth-child(5) .sidebaricon {
+  color: #0099ff;
+}
+
+.baritem.selected:nth-child(6) .sidebaricon {
+  color: #FF90BB;
+}
+
+
 .sidebaricon-container {
   display: flex;
   align-items: center;
@@ -87,7 +109,7 @@ code {
   color: #d8c4b6;
   height: 25px;
   width: 25px;
-  transition: 0.5s;
+  transition: 0.1s;
 }
 
 .sidebaritem-title {
@@ -218,4 +240,52 @@ li {
 li:hover {
   cursor: pointer;
   background-color: #c9c0b4;
+}
+
+.projects-container {
+  display: grid;
+  margin-left: 310px;
+  margin-right: 180px;
+  height: 80vh;
+  overflow-y: scroll;
+
+  /* Define the grid layout */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Change the number (4) to adjust the number of columns */
+  grid-gap: 50px;
+}
+
+.project-item {
+  height: 300px; 
+  width: 300px;
+  display: flex;
+  border-radius: 15px;
+  background: #D8C4B6;
+  transition: 0.3s;
+}
+
+.project-item:hover {
+  cursor: pointer;
+  opacity: 50%;
+}
+
+.project-item img {
+  object-fit: cover;
+  width: 300px;
+  height: 50%;
+  border-radius: 15px 15px 0px 0px;
+}
+
+
+::-webkit-scrollbar {
+  width: 10px; /* Adjust the width of the scrollbar */
+  border-radius: 20px; /* Set the border-radius for the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #808191; /* Set the color of the scrollbar thumb */
+  border-radius: 20px; /* Set the border-radius for the scrollbar thumb */
+}
+
+.projects-container::-webkit-scrollbar-track {
+  background-color: transparent; /* Set the background color of the scrollbar track */
 }
