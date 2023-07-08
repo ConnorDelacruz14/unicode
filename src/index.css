@@ -137,7 +137,7 @@ code {
 .header {
   display: flex;
   margin-left: 270px;
-  padding: 40px;
+  padding: 20px 40px;
   justify-content: space-between;
   align-items: center;
 }
@@ -261,6 +261,8 @@ li:hover {
   border-radius: 15px;
   background: #D8C4B6;
   transition: 0.3s;
+  flex-direction: column;
+  align-items: center;
 }
 
 .project-item:hover {
@@ -269,10 +271,25 @@ li:hover {
 }
 
 .project-item img {
-  object-fit: cover;
-  width: 300px;
-  height: 50%;
+  /* object-fit: cover; */
+  width: 280px;
+  height: 130px;
+  padding: 5px;
   border-radius: 15px 15px 0px 0px;
+}
+
+.project-name {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding: 20px;
+  text-align: left;
+}
+
+.project-description {
+  font-size: 12px;
+  padding: 20px;
 }
 
 
